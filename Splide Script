@@ -1,0 +1,51 @@
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0.5.3/dist/js/splide-extension-auto-scroll.min.js"></script>
+<script >
+    function slider1() {
+        let splides = $('.slider1');
+        for (let i = 0, splideLength = splides.length; i < splideLength; i++) {
+            new Splide(splides[i], {
+                speed: 2,
+                // Desktop on down
+                //perPage: 5,
+                //perMove: 1,
+                fixedWidth: '20rem',
+                fixedHeight: '23.75rem',
+                pauseOnHover: true,
+                focus: 'center', // 0 = left and 'center' = center
+                type: 'loop', // 'loop' or 'slide'
+                gap: '1.875rem', // space between slides
+                arrows: false, // 'slider' or false
+                pagination: false, // 'slider' or false
+                speed: 600, // transition speed in miliseconds
+                dragAngleThreshold: 60, // default is 30
+                autoWidth: false, // for cards with differing widths
+                rewind: false, // go back to beginning when reach end
+                rewindSpeed: 400,
+                waitForTransition: false,
+                updateOnMove: true,
+                trimSpace: false, // true removes empty space from end of list
+                breakpoints: {
+                    991: {
+                        // Tablet
+                        perPage: 3,
+                        gap: '1.875rem',
+                    },
+                    767: {
+                        // Mobile Landscape
+                        perPage: 2,
+                        gap: '1.875rem',
+                    },
+                    479: {
+                        // Mobile Portrait
+                        perPage: 2,
+                        gap: '1.875rem',
+                    }
+                }
+            }).mount();
+        }
+
+    }
+slider1();
+
+</script>
