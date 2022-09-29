@@ -28,17 +28,14 @@
                 breakpoints: {
                     991: {
                         // Tablet
-                        perPage: 3,
                         gap: '1.875rem',
                     },
                     767: {
                         // Mobile Landscape
-                        perPage: 2,
                         gap: '1.875rem',
                     },
                     479: {
                         // Mobile Portrait
-                        perPage: 2,
                         gap: '1.875rem',
                     }
                 }
